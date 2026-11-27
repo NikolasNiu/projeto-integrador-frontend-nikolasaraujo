@@ -158,3 +158,55 @@ footer {
     text-align: center;
     padding: var(--espacamento);
 }
+
+
+/* Barra de navegacao com Flexbox */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--raio-borda);
+}
+
+.navbar a:hover,
+.navbar a:focus-visible {
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+/* Grade responsiva de receitas */
+.grade-receitas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.receita-card {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+/* Diferencia visualmente os cards pares */
+.receita-card:nth-child(even) {
+    background-color: var(--cor-borda);
+}
+
+/* Transform evita recalcular o layout durante o hover,
+   ao contrario de alterar width ou height. */
+.receita-card:hover {
+    transform: translateY(-4px);
+}
