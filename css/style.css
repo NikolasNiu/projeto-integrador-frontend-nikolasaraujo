@@ -1,1 +1,160 @@
-/* Estilos do Site de Receitas */
+:root {
+    --cor-fundo: #fff8ef;
+    --cor-primaria: #613322;
+    --cor-secundaria: #925437;
+    --cor-borda: #e8d5be;
+    --cor-texto: #35251f;
+    --espacamento: 1rem;
+    --raio-borda: 12px;
+}
+
+/* O rem permite que as fontes respeitem o tamanho
+   de texto configurado pelo usuario no navegador. */
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#cabecalho-principal {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: var(--espacamento);
+}
+
+/* Classe reutilizavel com aplicacao do box model. */
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border: 1px solid var(--cor-borda);
+    margin-bottom: 1.5rem;
+    border-radius: var(--raio-borda);
+}
+
+.destaque {
+    color: var(--cor-secundaria);
+    font-weight: bold;
+}
+
+.botao {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--raio-borda);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* Combinador descendente para estilizar somente
+   os itens de lista que estiverem dentro dos cards. */
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--espacamento);
+}
+
+th,
+td {
+    border: 1px solid var(--cor-borda);
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+/* Estados dos links na ordem LoVe/HAte. */
+a:link {
+    color: #925437;
+}
+
+a:visited {
+    color: #795548;
+}
+
+a:hover {
+    color: #613322;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #b84a20;
+}
+
+img,
+video,
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+svg {
+    width: 30%;
+    max-width: 150px;
+    height: auto;
+}
+
+fieldset {
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    padding: var(--espacamento);
+    min-width: 0;
+}
+
+label {
+    display: block;
+    margin-top: var(--espacamento);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: var(--espacamento);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    font-size: 1rem;
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: var(--espacamento);
+}

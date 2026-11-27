@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Site de Receitas</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
-    <header>
+    <header id="cabecalho-principal">
         <h1>Meu Site de Receitas</h1>
         
 <!-- O SVG permaneceu nitido ao redimensionar a janela do navegador. -->
@@ -42,7 +46,7 @@
     </header>
 
     <main>
-        <section aria-labelledby="titulo-receitas">
+        <section class="card" aria-labelledby="titulo-receitas">
             <h2 id="titulo-receitas">Receitas disponíveis</h2>
 
             <ul>
@@ -94,7 +98,7 @@
             </p>
         </section>
 
-        <section aria-labelledby="titulo-formulario">
+        <section class="card" aria-labelledby="titulo-formulario">
             <h2 id="titulo-formulario">Envie sua receita</h2>
 
             <p>Compartilhe sua receita favorita conosco!</p>
@@ -137,14 +141,14 @@
                         </select>
                     </p>
 
-                    <button type="submit">Enviar receita</button>
+                    <button class="botao" type="submit">Enviar receita</button>
                 </fieldset>
             </form>
 
             <p id="mensagem" role="status" aria-live="polite"></p>
         </section>
     
-<section aria-labelledby="titulo-video">
+<section class="card" aria-labelledby="titulo-video">
     <h2 id="titulo-video">Vídeo de preparo do bolo</h2>
 
     <p>Confira uma demonstração em vídeo.</p>
@@ -162,8 +166,8 @@
 
         Seu navegador não suporta a reprodução de vídeos.
     </video>
-</section>
-<section>
+<section class="card">
+<section class="card">
     <h2>Comparação do tempo de preparo</h2>
 
     <canvas id="graficoReceitas" width="320" height="250"
